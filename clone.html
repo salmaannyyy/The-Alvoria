@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate IT - Your Modern Tech Partner</title>
+
+    <!-- Google Fonts: DM Serif Display for headers, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Boxicons for Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        /* --- 1. CSS Variables for Easy Theming --- */
+        :root {
+            --color-bg: #FFFFFF;
+            --color-bg-alt: #F8F9FA;
+            --color-text-primary: #111827;
+            --color-text-secondary: #4B5563;
+            --color-accent: #4F46E5; /* A vibrant indigo */
+            --color-accent-hover: #4338CA;
+            --color-border: #E5E7EB;
+            --font-family-heading: 'DM Serif Display', serif;
+            --font-family-body: 'Inter', sans-serif;
+            --transition-speed: 0.3s;
+        }
+
+        /* --- 2. General Setup --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family-body);
+            background-color: var(--color-bg);
+            color: var(--color-text-primary);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        section {
+            padding: 6rem 0;
+            overflow-x: clip; /* Prevents horizontal scroll from animations */
+        }
+        
+        .section-title {
+            font-family: var(--font-family-heading);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem auto;
+            color: var(--color-text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+      
+
+        /* --- 6. Process Section --- */
+        .process-section {
+            background-color: var(--color-bg-alt);
+        }
+        .process-grid {
+            display: grid;
+            gap: 3rem;
+        }
+         @media (min-width: 768px) {
+            .process-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .process-step {
+            position: relative;
+            padding: 1.5rem;
+        }
+        .process-step::before {
+            content: '0' counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            top: -1rem;
+            left: -1rem;
+            font-size: 5rem;
+            font-weight: 700;
+            color: rgba(0,0,0,0.04);
+            z-index: 0;
+        }
+        .process-step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        .process-step p {
+            position: relative;
+        }
+
+        /* --- 7. Tech Stack Marquee --- */
+        .tech-stack-section {
+            padding: 3rem 0;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .marquee-track {
+            display: flex;
+            width: fit-content;
+            animation: marquee 40s linear infinite;
+        }
+        .marquee-track img {
+            height: 40px;
+            margin: 0 3rem;
+            filter: grayscale(1);
+            opacity: 0.6;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* --- 8. Final CTA & Footer --- */
+        .cta-section {
+            background-color: var(--color-accent);
+            color: white;
+        }
+        .cta-section .section-title, .cta-section .section-subtitle {
+            color: white;
+        }
+        .cta-section .section-subtitle {
+            opacity: 0.9;
+        }
+        .cta-section .nav-btn {
+            background-color: white;
+            color: var(--color-accent);
+        }
+        .cta-section .nav-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* --- 9. Scroll Animations --- */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+    </style>
+</head>
+<body>
+
+   
+
+    <main>
+        <!-- <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content animate-on-scroll">
+                    <h1>Build The Future, Today.</h1>
+                    <p>We are a forward-thinking IT agency dedicated to crafting bespoke digital solutions that drive growth, efficiency, and innovation for startups and established enterprises.</p>
+                    <a href="#" class="nav-btn">Start Your Project</a>
+                </div>
+            </div>
+            <div class="hero-shape"></div>
+        </section> -->
+
+        <!-- <section class="services-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">What We Do</h2>
+                <p class="section-subtitle animate-on-scroll">From concept to launch, we provide end-to-end services to bring your digital vision to life.</p>
+                
+                <div class="bento-grid">
+                    <div class="bento-card large animate-on-scroll">
+                        <div>
+                            <i class='bx bx-code-alt icon'></i>
+                            <h3>Custom Software Development</h3>
+                            <p>Scalable, secure, and tailored to your exact business needs. We build robust applications that form the core of your digital operations.</p>
+                        </div>
+                        <a href="#" style="text-decoration:none;font-weight:600;color:var(--color-accent)">Learn More →</a>
+                    </div>
+                    <div class="bento-card animate-on-scroll">
+                        <i class='bx bx-cloud icon'></i>
+                        <h3>Cloud & DevOps</h3>
+                        <p>Streamline your infrastructure for maximum uptime and efficiency.</p>
+                    </div>
+                    <div class="bento-card animate-on-scroll">
+                        <i class='bx bx-mobile-alt icon'></i>
+                        <h3>Mobile App Design</h3>
+                        <p>Engaging iOS and Android apps that your users will love.</p>
+                    </div>
+                    <div class="bento-card animate-on-scroll">
+                        <i class='bx bx-data icon'></i>
+                        <h3>Data & AI Solutions</h3>
+                        <p>Unlock the power of your data with machine learning and analytics.</p>
+                    </div>
+                    <div class="bento-card animate-on-scroll">
+                        <i class='bx bx-palette icon'></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Intuitive and beautiful interfaces that drive user engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="process-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Our Simple, Proven Process</h2>
+                <p class="section-subtitle animate-on-scroll">We demystify the development process with a clear, collaborative, and results-driven approach.</p>
+                <div class="process-grid" style="counter-reset: step-counter;">
+                    <div class="process-step animate-on-scroll">
+                        <h3>Discovery & Strategy</h3>
+                        <p>We start by understanding your vision, goals, and challenges to create a tailored project roadmap.</p>
+                    </div>
+                    <div class="process-step animate-on-scroll">
+                        <h3>Design & Development</h3>
+                        <p>Our team gets to work, building your product with clean code and pixel-perfect design in agile sprints.</p>
+                    </div>
+                    <div class="process-step animate-on-scroll">
+                        <h3>Launch & Scale</h3>
+                        <p>We deploy your solution and provide ongoing support to ensure it grows and evolves with your business.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-stack-section">
+            <div class="marquee">
+                <div class="marquee-track">
+                    <!-- Placeholder logos - replace with your own SVGs or PNGs -->
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=React" alt="React">
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=Node.js" alt="Node.js">
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=Python" alt="Python">
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=AWS" alt="AWS">
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=Figma" alt="Figma">
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=Docker" alt="Docker">
+                    <!-- Duplicate logos for seamless loop -->
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=React" alt="React">
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=Node.js" alt="Node.js">
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=Python" alt="Python">
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=AWS" alt="AWS">
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=Figma" alt="Figma">
+                    <img src="https://via.placeholder.com/150x50/ccc/888?text=Docker" alt="Docker">
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title animate-on-scroll">Have an idea? Let's build it.</h2>
+                <p class="section-subtitle animate-on-scroll">We're ready to partner with you to turn your ambitious ideas into reality. Schedule a free, no-obligation consultation today.</p>
+                <a href="#" class="nav-btn animate-on-scroll">Schedule a Call</a>
+            </div>
+        </section>
+    </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+        elementsToAnimate.forEach(el => observer.observe(el));
+    });
+</script>
+
+</body>
+</html>
