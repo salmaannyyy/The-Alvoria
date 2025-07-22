@@ -1,0 +1,187 @@
+
+        section {
+            padding: 5rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2.5rem;
+            background-color: var(--color-accent-pink);
+            color: var(--color-text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color var(--transition-speed);
+        }
+        
+        .btn:hover {
+            background-color: var(--color-accent-pink-hover);
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            margin-bottom: 3rem;
+        }
+
+        /* --- 3. Hero Section --- */
+        .hero-section {
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 6vw, 4rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        /* --- 4. Client Logos Section --- */
+        .client-logos-section {
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .client-logos-wrapper {
+            text-align: center;
+        }
+
+        .client-logos-wrapper .eyebrow {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .logos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .logos-grid img {
+            height: 30px;
+            filter: grayscale(1);
+            opacity: 0.6;
+            transition: all var(--transition-speed);
+        }
+
+        .logos-grid img:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        /* --- 5. Content Grid Sections --- */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .content-grid.grid-2-col {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .content-grid.grid-3-col {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .content-grid h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .content-grid p {
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .custom-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .custom-list li {
+            padding: 0.4rem 0;
+            display: flex;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+        }
+        
+        .custom-list li::before {
+            content: '>';
+            color: var(--color-accent-pink);
+            font-weight: 700;
+            margin-right: 0.75rem;
+        }
+        
+        .highlight {
+            color: var(--color-accent-pink);
+        }
+
+        /* --- 6. FAQ Accordion Section --- */
+        .faq-section {
+            background-color: var(--color-bg-grey);
+        }
+        .faq-section .section-title {
+            text-align: center;
+        }
+        
+        .accordion-item {
+            border-bottom: 2px solid var(--color-border);
+        }
+        
+        .accordion-header {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: var(--font-family-body);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .accordion-icon {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-accent-pink);
+            transition: transform var(--transition-speed) ease;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-speed) ease-out;
+        }
+        
+        .accordion-content p {
+            padding-bottom: 1.5rem;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+
+        /* --- 7. Final CTA Section --- */
+        .final-cta-section {
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-light);
+            text-align: center;
+        }

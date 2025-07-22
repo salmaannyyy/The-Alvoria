@@ -1,0 +1,253 @@
+ h1, h2, h3, h4 {
+            font-weight: 700;
+        }
+section {
+            padding: 5rem 0;
+        }
+        
+        /* --- 3. Hero Section --- */
+        .hero-section {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1470&auto=format&fit=crop') no-repeat center center/cover;
+            color: white;
+            padding: 5rem 1.5rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+        
+        .job-search-form {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 50px;
+            padding: 0.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .job-search-form input {
+            flex-grow: 1;
+            border: none;
+            background: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .job-search-form input:focus {
+            outline: none;
+        }
+        
+        .job-search-form button {
+            background-color: var(--color-primary-blue);
+            color: white;
+            border: none;
+            padding: 0 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color var(--transition-speed);
+        }
+        .job-search-form button:hover {
+            background-color: var(--color-primary-blue-hover);
+        }
+
+        /* --- 4. Content Sections --- */
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            background-color: var(--color-bg-light);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .benefit-card .icon {
+            font-size: 3rem;
+            color: var(--color-primary-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .benefit-card p {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* --- 5. "Life at Systems" Section --- */
+        .life-section {
+            background-color: var(--color-bg-grey);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative background pattern */
+        .life-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(circle, var(--color-border) 2px, transparent 2px);
+            background-size: 20px 20px;
+            opacity: 0.5;
+        }
+
+        .life-section .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .life-section p {
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        .video-placeholder {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            aspect-ratio: 16 / 9;
+            background-color: #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop');
+            background-size: cover;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color: var(--color-primary-blue);
+            cursor: pointer;
+            transition: transform var(--transition-speed);
+        }
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- 6. Job Listings Section --- */
+        .job-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--color-border);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+        }
+
+        .filter-btn:hover {
+            background-color: var(--color-bg-grey);
+            border-color: #ccc;
+        }
+
+        .filter-btn.active {
+            background-color: var(--color-primary-blue);
+            color: white;
+            border-color: var(--color-primary-blue);
+        }
+        
+        .job-listings {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .job-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+        }
+        
+        .job-card h3 {
+            font-size: 1.25rem;
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 1rem;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .view-details-btn {
+            color: var(--color-primary-blue);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .view-details-btn i {
+            transition: transform var(--transition-speed);
+        }
+        
+        .view-details-btn:hover i {
+            transform: translateX(4px);
+        }
