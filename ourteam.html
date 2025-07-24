@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-commerce</title>
+    <title>The Alvoria</title>
 
-
-     <!--css links-->
+    <!--css links-->
 <link rel="stylesheet" href="Assists/css/style.css">
-<link rel="stylesheet" href="Assists/css/business.css">
-
+<link rel="stylesheet" href="Assists/css/ourteam.css">
 
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,10 +17,10 @@
     <!-- Boxicons for Social Media Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-
+ 
 </head>
 <body>
-     <header class="header">
+    <header class="header">
         <div class="container navbar">
             <div class="logo">
                 <img style="height: 80px;" src="img/Alvoria logo (1).png" alt="Company logo"  />
@@ -77,7 +75,7 @@
                         <div class="dropdown">
                             <ul class="dropdown-menu">
                                 <li class="dropdown-item"><a href="startups.html">Startups</a></li>
-                                <li class="dropdown-item"><a href="#">SMEs / Businesses</a></li>
+                                <li class="dropdown-item"><a href="businessess.html">SMEs / Businesses</a></li>
                                 <li class="dropdown-item"><a href="healthcare.html">Healthcare</a></li>
                                 <li class="dropdown-item"><a href="e-commerce.html">E-commerce</a></li>
                                 <li class="dropdown-item"><a href="lifestyle.html">Wellness / Lifestyle</a></li>
@@ -106,7 +104,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="carrer.html" class="nav-link">Careers</a></li>
                 </ul>
             </nav>
             
@@ -116,102 +114,93 @@
         </div>
     </header>
 
- <header class="hero-section">
-        <div class="container">
-            <span class="eyebrow" style="color: #ccc;">Business Process Outsourcing</span>
-            <h1 class="hero-title">Building visibility, boosting performance, & delivering results</h1>
-            <a href="#" class="btn">Get In Touch</a>
-        </div>
-    </header>
-
-    <main>
-        <section class="solutions-section">
-            <div class="container content-grid">
-                <div class="content-text">
-                    <h2>Impactful CX & insightful solutions</h2>
-                    <p>We provide a complete suite of next-gen contact center solutions, digital marketing offerings, and unparalleled bandwidth scalability for all types and sizes of businesses. We provide the expertise, tools, and talent to help manage your financial interactions and transactions, and mitigate risks. Our BPO strategies are designed to fit a vast range of industries.</p>
-                </div>
-                <div class="content-image">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1470&auto=format&fit=crop" alt="A team working in a modern office at night">
-                </div>
-            </div>
-        </section>
-
-        <section class="strategies-section">
-            <div class="container content-grid">
-                <div class="content-text">
-                    <span class="eyebrow">Our Offerings</span>
-                    <h2>Strategies and <span class="highlight">solutions</span></h2>
-                    <p>We combine creativity, analytics, technology, and strategy to produce work that pushes the envelope, engages key audiences, and produces significant outcomes.</p>
-                    <a href="#" class="text-link">Get In Touch <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-                <div class="content-text">
-                     <h3>Contact Center</h3>
-                     <p>We are a well-resourced backdesk for your customers, and ensure first-contact resolution.</p>
-                     <a href="#" class="text-link">Explore More <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-        </section>
-        
-        <section class="expertise-section">
+ <main>
+        <section class="spotlight-section">
             <div class="container">
-                <div class="section-header">
-                    <h2>Our Expertise</h2>
-                    <p>With 15+ years of experience, we're called the connoisseurs of the digital universe.</p>
+                <div class="section-headers">
+                  <center>  <h2 class="section-title">In the spotlight – <span class="highlight">NinjaPromo's brightest stars</span></h2>
+                    <p class="section-subtitle">Meet the minds behind our best work</p></center>
                 </div>
-                <div class="expertise-grid">
-                    <div class="expertise-card">
-                        <i class='bx bx-trending-up icon'></i>
-                        <h3>Lead generation</h3>
-                        <p>We go by the motto, "We move the market," and we make it happen by building a pipeline of potential leads through immaculate strategies.</p>
+                
+                <div class="spotlight-grid">
+                    <div class="member-selectors">
+                        <button data-member="michael">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop" alt="Michael">
+                            Michael
+                            <i class='bx bx-chevron-right chevron'></i>
+                        </button>
+                        <button data-member="olga">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop" alt="Olga">
+                            Olga
+                            <i class='bx bx-chevron-right chevron'></i>
+                        </button>
+                        <button data-member="george" class="active">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374&auto=format&fit=crop" alt="George">
+                            George
+                            <i class='bx bx-chevron-right chevron'></i>
+                        </button>
                     </div>
-                    <div class="expertise-card">
-                        <i class='bx bx-line-chart-down icon'></i>
-                        <h3>Growth & scalability</h3>
-                        <p>With our ISMS-aligned infrastructure, for us, growth takes precedence.</p>
+
+                    <div class="member-photo">
+                        <img id="member-photo-img" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374&auto=format&fit=crop" alt="George photo">
                     </div>
-                    <div class="expertise-card">
-                        <i class='bx bx-search-alt icon'></i>
-                        <h3>Search</h3>
-                        <p>Creative and data-driven! Our strategies ensure more traffic for your website by ranking them on SERP.</p>
-                    </div>
-                    <div class="expertise-card">
-                        <i class='bx bxs-megaphone icon'></i>
-                        <h3>Brand awareness</h3>
-                        <p>Your brand deserves to be an eponym, and we ensure it lands on the global map through promotion awareness campaigns.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="certifications-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Certifications & Awards</h2>
-                    <p>Backed by digital leaders - we are recognized as industry experts.</p>
-                </div>
-                <div class="logo-grid">
-                    <!-- Placeholder Logos - Replace with your own images -->
-                    <div class="logo-item">
-                        <img src="https://via.placeholder.com/150x80/ccc/888?text=Search+Ads" alt="Search Ads Certification">
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://via.placeholder.com/150x80/ccc/888?text=ISO+9001" alt="ISO 9001 Certification">
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://via.placeholder.com/150x80/ccc/888?text=ISO+27001" alt="ISO 27001 Certification">
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://via.placeholder.com/150x80/ccc/888?text=PSEB" alt="PSEB Award">
+                    
+                    <div class="member-bio" id="member-bio-content">
+                        <!-- Content will be injected by JavaScript -->
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="values-section">
+            <div class="container">
+                <div class="section-headers">
+                <center>   <h2 class="section-title">At NinjaPromo, <span class="highlight">we break boundaries</span></h2>  </center> 
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="icon"><i class='bx bx-rocket'></i></div>
+                        <h3>Opportunity for all</h3>
+                        <p>No matter where you come from, we believe that everyone should have the opportunity to make the most of their talents and grow in their careers.</p>
+                    </div>
+                     <div class="value-card">
+                        <div class="icon"><i class='bx bxs-graduation'></i></div>
+                        <h3>Constant growth and learning</h3>
+                        <p>We invest in our talented people through various training programs, workshops, and conferences to boost their skills and stay on top of the industry.</p>
+                    </div>
+                     <div class="value-card">
+                        <div class="icon"><i class='bx bx-globe-alt'></i></div>
+                        <h3>Going beyond borders</h3>
+                        <p>Our team is always open to finding talent in new cultures and markets. This allows us to offer a truly global perspective for every one of our clients.</p>
+                    </div>
+                     <div class="value-card">
+                        <div class="icon"><i class='bx bx-briefcase'></i></div>
+                        <h3>Fair pay for fair work</h3>
+                        <p>We value our team members and believe in paying them fairly. Our pay packages are designed to reward hard work, dedication, and growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-banners">
+                    <div style="position: relative; z-index: 1;">
+                        <h2>Join the Ninja team!</h2>
+                        <p>Are you ready to be part of a dynamic and diverse team? Check out our job openings and join the Ninja squad.</p>
+                        <a href="#" class="cta-btn">View vacancies</a>
+                    </div>
+                    <div class="cta-graphics">
+                        <!-- Placeholder decorative image -->
+                        <img src="https://i.imgur.com/B7Lej6S.png" alt="Decorative graphics">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
-     <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-container">
                 <div class="footer-about">
@@ -276,68 +265,77 @@
             document.body.classList.toggle('mobile-menu-open');
         });
 
-        // --- SCRIPT FOR CAROUSEL (NEW) ---
-        document.addEventListener('DOMContentLoaded', () => {
-            const carousel = document.querySelector('.carousel-container');
-            if (!carousel) return; // Don't run if carousel doesn't exist
+      document.addEventListener('DOMContentLoaded', () => {
+    const memberData = {
+        michael: {
+            photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop',
+            bio: `<ul>
+                    <li>Product Manager with a passion for user-centric design and agile methodologies.</li>
+                    <li>Led the development of three major platform releases, resulting in a 40% increase in user engagement.</li>
+                    <li>Experienced in market research, product roadmapping, and cross-functional team leadership.</li>
+                  </ul>`
+        },
+        olga: {
+            photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop',
+            bio: `<ul>
+                    <li>Lead UX/UI Designer with over 8 years of experience in creating intuitive and beautiful digital products.</li>
+                    <li>Specializes in SaaS and mobile applications, focusing on creating seamless user journeys.</li>
+                    <li>Proficient in Figma, Sketch, and Adobe Creative Suite, with a strong understanding of front-end development principles.</li>
+                  </ul>`
+        },
+        george: {
+            photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374&auto=format&fit=crop',
+            bio: `<ul>
+                    <li>PR and Communications expert with background in web3, gaming and esports. Delivered dozens of media campaigns for brands such as Cloudbet and CSMONEY.</li>
+                    <li>Co-authored research papers on Women in Esports and Professional Skin Trading at DICORP.</li>
+                    <li>George brings a wealth of experience in his industries and helps clients transform these insights into actionable long-term PR plans.</li>
+                  </ul>`
+        }
+    };
 
-            const track = carousel.querySelector('.carousel-track');
-            const slides = Array.from(track.children);
-            const nextButton = carousel.querySelector('.carousel-btn.next');
-            const prevButton = carousel.querySelector('.carousel-btn.prev');
-            const progressBar = carousel.querySelector('.progress-bar');
-            const slideCounter = carousel.querySelector('.slide-counter');
-            
-            let currentIndex = 0;
-            const slideWidth = slides.length > 0 ? slides[0].getBoundingClientRect().width : 0;
+    const selectors = document.querySelectorAll('.member-selectors button');
+    const photoElement = document.getElementById('member-photo-img');
+    const bioElement = document.getElementById('member-bio-content');
 
-            const moveToSlide = (targetIndex) => {
-                const currentSlideWidth = slides[0].getBoundingClientRect().width;
-                track.style.transform = `translateX(-${currentSlideWidth * targetIndex}px)`;
-                
-                slides[currentIndex].classList.remove('is-selected');
-                slides[targetIndex].classList.add('is-selected');
-                
-                currentIndex = targetIndex;
-                updateControls();
-            };
+    function updateSpotlight(memberName) {
+        const data = memberData[memberName];
+        if (!data) return;
 
-            const updateControls = () => {
-                const progress = ((currentIndex + 1) / slides.length) * 100;
-                progressBar.style.width = `${progress}%`;
-                slideCounter.textContent = `${currentIndex + 1} / ${slides.length}`;
-                prevButton.disabled = currentIndex === 0;
-                nextButton.disabled = currentIndex === slides.length - 1;
-            };
-            
-            if (slides.length > 0) {
-                slides[0].classList.add('is-selected');
-                updateControls();
-            }
+        // Add fading class to trigger animation
+        photoElement.classList.add('fading');
+        bioElement.classList.add('fading');
 
-            nextButton.addEventListener('click', () => {
-                if (currentIndex < slides.length - 1) {
-                    moveToSlide(currentIndex + 1);
-                }
-            });
+        setTimeout(() => {
+            // Update the content after the fade-out
+            photoElement.src = data.photo;
+            bioElement.innerHTML = data.bio;
 
-            prevButton.addEventListener('click', () => {
-                if (currentIndex > 0) {
-                    moveToSlide(currentIndex - 1);
-                }
-            });
-            
-            window.addEventListener('resize', () => {
-                 if (slides.length > 0) {
-                    const newSlideWidth = slides[0].getBoundingClientRect().width;
-                    track.style.transition = 'none';
-                    track.style.transform = `translateX(-${newSlideWidth * currentIndex}px)`;
-                    setTimeout(() => {
-                        track.style.transition = '';
-                    }, 50);
-                }
-            });
+            // Remove fading class to trigger fade-in
+            photoElement.classList.remove('fading');
+            bioElement.classList.remove('fading');
+        }, 300); // This duration should match the CSS transition duration
+    }
+
+    selectors.forEach(button => {
+        button.addEventListener('click', () => {
+            // Update active state on buttons
+            selectors.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Update the content
+            const memberName = button.dataset.member;
+            updateSpotlight(memberName);
         });
+    });
+
+    // Initialize with the default active member
+    const initialMember = document.querySelector('.member-selectors button.active').dataset.member;
+    updateSpotlight(initialMember);
+});
+
+     
     </script>
+<script src="myscripts.js"></script>
+    <script src="/Assists/js/ourteam.js"></script>
 </body>
 </html>
