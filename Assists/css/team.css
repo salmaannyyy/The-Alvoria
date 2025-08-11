@@ -1,0 +1,204 @@
+
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-headers {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title .highlight {
+            color: var(--color-accent-pink);
+        }
+
+        .section-subtitle {
+            color: var(--color-accent-purple);
+            font-weight: 600;
+        }
+
+        /* --- 3. Spotlight Section --- */
+        .spotlight-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        @media (min-width: 992px) {
+            .spotlight-grid {
+                grid-template-columns: 300px 1fr 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .member-selectors button {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--color-bg-light);
+            border: 2px solid var(--color-border);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            text-align: left;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all var(--transition-speed);
+        }
+        
+        .member-selectors button img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .member-selectors button .chevron {
+            margin-left: auto;
+            color: var(--color-text-secondary);
+        }
+
+        .member-selectors button.active {
+            border-color: var(--color-accent-purple);
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.2);
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 24px;
+            filter: grayscale(1);
+            opacity: 1;
+            transition: opacity var(--transition-speed);
+        }
+        
+        .member-photo img.fading {
+            opacity: 0;
+        }
+        
+        .member-bio {
+            opacity: 1;
+            transition: opacity var(--transition-speed);
+        }
+        .member-bio.fading {
+            opacity: 0;
+        }
+
+        .member-bio ul {
+            list-style-type: '• ';
+            padding-left: 1.5rem;
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+        
+        .member-bio ul li {
+            margin-bottom: 1rem;
+        }
+
+        /* --- 4. Values Section --- */
+        .values-section {
+            background-color: var(--color-bg-grey);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .value-card {
+            background-color: var(--color-bg-light);
+            padding: 2rem;
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            transition: all var(--transition-speed);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        
+        .value-card .icon {
+            width: 50px;
+            height: 50px;
+            background-color: #EDE9FE;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--color-accent-purple);
+            margin-bottom: 1.5rem;
+        }
+        
+        .value-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .value-card p {
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        
+        /* --- 5. CTA Section --- */
+        .cta-banners {
+            background: linear-gradient(90deg, #5B21B6, #9333EA);
+            border-radius: 24px;
+            padding: 4rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        @media (min-width: 992px) {
+            .cta-banners {
+                grid-template-columns: 1.5fr 1fr;
+            }
+        }
+        
+        .cta-banners h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .cta-banners p { color: #E9D5FF; margin-bottom: 2rem; }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            background: linear-gradient(90deg, #F9A8D4, #F472B6);
+            color: var(--color-text-primary);
+            transition: transform var(--transition-speed);
+        }
+        
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .cta-graphics {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        .cta-graphics img {
+            width: 300px;
+        }

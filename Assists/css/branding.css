@@ -1,0 +1,92 @@
+:root {
+            --color-bg-light: #FFFFFF;
+            --color-bg-grey: #F8F9FA;
+            --color-text-primary: #111827;
+            --color-text-secondary: #4B5563;
+            --color-accent: #4338CA; /* Indigo from the example */
+            --color-accent-hover: #3730A3;
+            --color-border: #E5E7EB;
+            --font-family: 'Inter', sans-serif;
+            --transition-speed: 0.3s;
+             --header-height: 80px;
+            --color-slate-blue: #466C8B;
+            --color-deep-navy: #2B2D42;
+            --color-accent-teal: #18C0C1;
+            --color-footer-bg: #2B2D42;
+            --color-footer-text: #f5f5f5;
+            --color-text: #2B2D42;
+            --color-bg: #FFFFFF;
+            --color-bg-alt: #F8F9FA;
+            --border-color: #e5e7eb;
+            --color-progress-bar: #86BC25;
+            --color-carousel-btn: #0073e6;
+            --color-green-primary: #a3f700;
+            --color-green-gradient: linear-gradient(135deg, #18C0C1 0%, #18C0C1 100%);
+            --color-green-dark: #2a331e;
+            --font-family: 'Poppins', sans-serif;
+            --font-family-alt: 'Onest', sans-serif;
+            --transition-speed: 0.7s;
+            --transition-speed-slow: 0.4s;
+        }
+
+        /* --- 2. General Setup --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-family); background-color: var(--color-bg-light); color: var(--color-text-primary); }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 5rem 0; }
+        .section-title { font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 800; text-align: center; margin-bottom: 3rem; }
+        
+        /* --- 3. Hero Section --- */
+        .hero-section { background: var(--color-accent-teal); color: white; text-align: center; }
+        .hero-title { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.2; margin-bottom: 1.5rem; }
+        .hero-text { max-width: 600px; margin: 0 auto 2.5rem; opacity: 0.9; }
+        .cta-group { display: flex; justify-content: center; align-items: center; gap: 2rem; }
+        .btn { padding: 0.8rem 2rem; background-color: var(--color-bg-light); color: var(--color-accent-teal); text-decoration: none; font-weight: 600; border-radius: 8px; transition: all var(--transition-speed); }
+        .btn:hover { background-color: #f0f0f0; transform: translateY(-2px); }
+        .link-secondary { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; text-decoration: none; color: white; }
+        .link-secondary .icon { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; background-color: white; color: var(--color-accent); border-radius: 50%; transition: transform var(--transition-speed); }
+        .link-secondary:hover .icon { transform: rotate(45deg); }
+
+        /* --- 4. Content Sections --- */
+        .content-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+        @media (min-width: 992px) { .content-grid { grid-template-columns: 1fr 1.2fr; } }
+        .content-grid ul { list-style: none; margin-top: 1.5rem; }
+        .content-grid li { padding: 0.4rem 0 0.4rem 1.5rem; position: relative; }
+        .content-grid li::before { content: '•'; position: absolute; left: 0; color: var(--color-accent); font-size: 1.5rem; line-height: 1; }
+        .illustration img { max-width: 300px; display: block; margin: 0 auto; }
+        
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+        .service-item { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; margin-bottom: 2rem; }
+        @media (min-width: 992px) { .service-item { grid-template-columns: 1fr 1fr; } .service-item:nth-child(even) .illustration { order: -1; } }
+
+        /* --- 5. Branding Process Timeline --- */
+        .process-timeline { display: flex; flex-direction: column; gap: 2rem; position: relative; }
+        @media (min-width: 992px) { .process-timeline { flex-direction: row; justify-content: space-between; } .process-timeline::before { content: ''; position: absolute; top: 12px; left: 5%; right: 5%; height: 2px; background-color: var(--color-border); z-index: 1; } }
+        .process-step { text-align: center; position: relative; z-index: 2; padding: 0 1rem; }
+        .step-number { width: 24px; height: 24px; border: 2px solid var(--color-accent); border-radius: 50%; background-color: white; margin: 0 auto 1rem; }
+        .process-step h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        
+        /* --- 6. Testimonial Slider --- */
+        .testimonial-section { background-color: var(--color-bg-grey); }
+        .testimonial-viewport { overflow: hidden; }
+        .testimonial-track { display: flex; transition: transform var(--transition-speed) ease; }
+        .testimonial-slide { flex: 0 0 100%; padding: 0 0.5rem; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .testimonial-card { border-left: 3px solid var(--color-border); padding-left: 1.5rem; }
+        .testimonial-footer { display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem; }
+        .testimonial-footer img { width: 40px; height: 40px; border-radius: 50%; }
+        
+        .slider-controls { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; }
+        .slider-arrows { display: flex; gap: 1rem; }
+        .slider-arrow { background: none; border: 1px solid var(--color-border); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; transition: all var(--transition-speed); }
+        .slider-arrow:hover { background-color: var(--color-accent); color: white; border-color: var(--color-accent); }
+        .slider-arrow:disabled { opacity: 0.4; cursor: not-allowed; }
+
+        /* --- 7. FAQ Accordion --- */
+        .faq-accordion { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--color-border); }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; width: 100%; background: none; border: none; padding: 1.5rem 0; text-align: left; font-size: 1.1rem; font-weight: 600; cursor: pointer; }
+        .faq-icon { width: 24px; height: 24px; background-color: var(--color-accent-teal); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; transition: transform var(--transition-speed); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height var(--transition-speed) ease-out; }
+        .faq-answer p { padding: 0 0 1.5rem; color: var(--color-text-secondary); line-height: 1.7; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }

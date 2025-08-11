@@ -1,0 +1,89 @@
+
+
+        /* --- 3. About Section Layout --- */
+        .about-section {
+            padding: 6rem 0;
+            overflow: hidden; /* Important for the word animations */
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        /* --- 4. Content & Animation Styling --- */
+        .eyebrow {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .about-title {
+            font-family: var(--font-family-heading);
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        /* Word Animation Setup */
+        .about-title .word {
+            display: inline-block;
+            transform: translateY(110%);
+            opacity: 0;
+            transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
+        }
+        
+        /* State when section is visible */
+        .about-section.is-visible .about-title .word {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-text-secondary);
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s;
+        }
+        
+        .about-section.is-visible .about-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+      
+
+      
+        
+        /* --- 6. Image Animation --- */
+        .about-image-wrapper { 
+            /* Initial state for clip-path animation (hidden) */
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+            transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1) 0.4s;
+        }
+        
+        .about-section.is-visible .about-image-wrapper {
+            /* Final state for clip-path animation (fully visible) */
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+        }
+        
+        .about-image {
+            width: 500px;
+            height: 500px;
+            display: block;
+            border-radius: 16px;
+        }

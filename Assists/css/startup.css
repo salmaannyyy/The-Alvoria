@@ -1,0 +1,260 @@
+  :root {
+            --header-height: 80px;
+            --color-slate-blue: #466C8B;
+            --color-deep-navy: #2B2D42;
+            --color-accent-teal: #18C0C1;
+            --color-footer-bg: #2B2D42;
+            --color-footer-text: #f5f5f5;
+            --color-text: #2B2D42;
+            --color-bg: #FFFFFF;
+            --color-bg-alt: #F8F9FA;
+            --border-color: #e5e7eb;
+            --color-progress-bar: #86BC25;
+            --color-carousel-btn: #0073e6;
+            --color-green-primary: #a3f700;
+            --color-green-gradient: linear-gradient(135deg, #18C0C1 0%, #18C0C1 100%);
+            --color-green-dark: #2a331e;
+            --font-family: 'Poppins', sans-serif;
+            --font-family-alt: 'Onest', sans-serif;
+            --transition-speed: 0.7s;
+            --transition-speed-slow: 0.4s;
+        }
+        section {
+            padding: 5rem 0;
+        }
+           .section-title {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            color: var(--color-accent-green-hover);
+        }
+
+        /* --- 3. Hero Section --- */
+        .hero-section {
+            text-align: center;
+            background-color: var(--color-bg-grey);
+            padding-top: 8rem;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.8rem, 6vw, 4.25rem);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--color-accent-green);
+            color: var(--color-text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: background-color var(--transition-speed);
+        }
+        
+        .btn:hover {
+            background-color: var(--color-accent-green-hover);
+        }
+
+        /* --- 4. "What We Do" Section --- */
+        .what-we-do-section {
+            margin-top: -5rem; /* Creates the overlap effect */
+        }
+        .what-we-do-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+            background-color: var(--color-bg-light);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border: 1px solid var(--color-border);
+        }
+
+        @media (min-width: 992px) {
+            .what-we-do-card {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .what-we-do-card h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .what-we-do-card p {
+            color: var(--color-text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .checklist {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        
+        .checklist li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .checklist li i {
+            color: var(--color-accent-green-hover);
+        }
+        
+        .illustration img {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 5. Complex Services Section --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: var(--color-bg-grey);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+            font-weight: 600;
+        }
+        
+        .service-item .icon {
+            font-size: 1.5rem;
+            color: var(--color-accent-green-hover);
+        }
+
+        /* --- 6. Global Reach Section --- */
+        .reach-section {
+            background-color: var(--color-bg-grey);
+        }
+        .map-container img {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        /* --- 7. Pricing Section --- */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        @media (min-width: 992px) {
+            .pricing-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .pricing-card {
+            background-color: var(--color-bg-light);
+            border: 2px solid var(--color-border);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-card .btn {
+            margin-top: 1.5rem;
+        }
+        
+        .pricing-card.highlighted {
+            background-color: #2c3e50;
+            color: white;
+            border-color: #34495e;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.highlighted p { color: #bdc3c7; }
+        .pricing-card.highlighted .btn {
+            background-color: var(--color-accent-green);
+        }
+        .pricing-card.highlighted .btn:hover {
+            background-color: var(--color-accent-green-hover);
+        }
+        
+        .all-plans-btn {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        /* --- 8. Attorneys / Institutions Section --- */
+        .attorneys-section {
+            background-color: var(--color-bg-grey);
+        }
+        .institutions-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+        .institutions-grid img {
+            height: 40px;
+            filter: grayscale(1);
+            opacity: 0.6;
+            transition: all var(--transition-speed);
+        }
+        .institutions-grid img:hover {
+            filter: none;
+            opacity: 1;
+        }
+
+        /* --- 9. Testimonials Section --- */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+         @media (min-width: 992px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .testimonial-card {
+            border: 1px solid var(--color-border);
+            padding: 2rem;
+            border-radius: 16px;
+        }
+        .testimonial-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .testimonial-card .stars {
+            color: #f1c40f;
+            margin-bottom: 1rem;
+        }

@@ -1,0 +1,144 @@
+
+        /* --- 3. Page Header Section --- */
+        .page-case {
+            text-align: center;
+            padding: 5rem 0 3rem;
+        }
+
+        .page-case .eyebrow {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .page-case .title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .page-case .subtitle {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- 4. Main Article Content --- */
+        .case-study-content {
+            background-color: var(--color-bg-content);
+            padding: 3rem 0;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .article-section {
+            margin-bottom: 3rem;
+        }
+
+        .article-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .article-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        /* --- 5. "More Case Studies" Section --- */
+        .more-studies-section {
+            padding: 5rem 0;
+        }
+        
+        .more-studies-container {
+             max-width: 1100px; /* Wider container for the grid */
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+
+        .studies-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .studies-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .study-card {
+            display: block; /* Makes the whole card a link */
+            text-decoration: none;
+            background-color: var(--color-bg-content);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            border: 1px solid var(--color-border);
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.07);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            height: 250px;
+        }
+
+        .card-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+        }
+
+        .card-image-overlay .eyebrow {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--color-text-primary);
+        }
+   

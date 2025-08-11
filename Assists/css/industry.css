@@ -1,0 +1,175 @@
+
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+       
+        
+        section {
+            padding: 5rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--color-accent-pink);
+            color: var(--color-text-light);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color var(--transition-speed);
+        }
+        
+        .btn:hover {
+            background-color: var(--color-accent-pink-hover);
+        }
+
+        /* --- 3. Hero Section (Adapted to light theme) --- */
+        .hero-section {
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* --- 4. Trend Overview Section --- */
+        .overview-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 992px) {
+            .overview-container {
+                grid-template-columns: 1.2fr 1fr;
+            }
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .overview-content p {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .overview-content .btn {
+            margin-top: 1rem;
+        }
+        
+        .overview-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        
+        /* --- 5. Key Trends Breakdown Section --- */
+        .key-trends-section {
+            background-color: var(--color-bg-grey);
+        }
+
+        .trends-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        @media (min-width: 992px) {
+            .trends-container {
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+        
+        .trends-list-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem 3rem;
+        }
+        
+        @media (min-width: 768px) {
+            .trends-list-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .trends-list-grid ul {
+            list-style: none;
+        }
+
+        .trends-list-grid li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            font-weight: 600;
+        }
+        
+        .trends-list-grid li::before {
+            content: '>';
+            color: var(--color-accent-pink);
+            font-weight: 800;
+            margin-right: 0.75rem;
+            line-height: 1.5;
+        }
+        
+        /* --- 6. Expert Quote / Testimonial Section --- */
+        .quote-section {
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-light);
+            text-align: center;
+        }
+
+        .quote-wrapper {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-wrapper::before {
+            content: '“';
+            position: absolute;
+            top: -2.5rem;
+            left: -1rem;
+            font-size: 8rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.1);
+            line-height: 1;
+            z-index: 0;
+        }
+        
+        .quote-text {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 600;
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .quote-author {
+            display: block;
+            margin-top: 2rem;
+            font-style: italic;
+            color: #b5b5b5;
+        }
+        
+        .quote-author::before {
+            content: '— ';
+        }
+
+   

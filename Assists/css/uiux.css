@@ -1,0 +1,88 @@
+ :root {
+            --color-bg-light: #FFFFFF;
+            --color-bg-grey: #F8F9FA;
+            --color-text-primary: #1A202C;
+            --color-text-secondary: #4A5568;
+            --color-accent: #F97316; /* Vibrant Orange */
+            --color-accent-hover: #EA580C;
+            --color-border: #E2E8F0;
+            --font-family: 'Inter', sans-serif;
+            --transition-speed: 0.3s;
+            --header-height: 80px;
+            --color-slate-blue: #466C8B;
+            --color-deep-navy: #2B2D42;
+            --color-accent-teal: #18C0C1;
+            --color-footer-bg: #2B2D42;
+            --color-footer-text: #f5f5f5;
+            --color-text: #2B2D42;
+            --color-bg: #FFFFFF;
+            --color-bg-alt: #F8F9FA;
+            --border-color: #e5e7eb;
+            --color-progress-bar: #86BC25;
+            --color-carousel-btn: #0073e6;
+            --color-green-primary: #a3f700;
+            --color-green-gradient: linear-gradient(135deg, #18C0C1 0%, #18C0C1 100%);
+            --color-green-dark: #2a331e;
+            --font-family: 'Poppins', sans-serif;
+            --font-family-alt: 'Onest', sans-serif;
+            --transition-speed: 0.7s;
+            --transition-speed-slow: 0.4s;
+        }
+
+        /* --- 2. General Setup --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-family); background-color: var(--color-bg-light); color: var(--color-text-primary); }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 5rem 0; position: relative; overflow: hidden; }
+        h1, h2, h3 { font-weight: 800; line-height: 1.2; }
+        p { line-height: 1.8; color: var(--color-text-primary); }
+        .highlight {  color: white; padding: 0.2rem 0.6rem; border-radius: 8px; }
+        a.highlight { color: var(--color-text); padding: 0; text-decoration: underline; }
+
+
+
+
+        
+        /* --- 3. Hero Section --- */
+        .hero-section { background-color: var(--color-bg-grey);  }
+        .hero-grid { display: grid; grid-template-columns: 1fr;  align-items: center; }
+        @media (min-width: 992px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
+        .eyebrow { font-size: 0.9rem; font-weight: 700; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+        .hero-title { font-size: clamp(3rem, 6vw, 4.5rem); }
+        .cta-group { display: flex; gap: 1rem; margin-top: 2rem; }
+        .btn { padding: 0.8rem 2rem; text-decoration: none; font-weight: 600; border-radius: 8px; transition: all var(--transition-speed); }
+        .btn-primary { background-color: var(--color-accent-teal); color: white; }
+        .btn-primary:hover { background-color: var(--color-accent-teal); }
+        .btn-secondary { background-color: transparent; color: var(--color-text-secondary); border: 2px solid var(--color-border); }
+        .btn-secondary:hover { border-color: var(--color-text-secondary); }
+        
+        .imghero1{ height: 500px; width: 500px;}
+        /* --- 4. Content Sections --- */
+        .content-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
+        @media (min-width: 992px) { .content-grid { grid-template-columns: 1fr 1fr; } }
+        .content-grid h2 { font-size: clamp(2rem, 5vw, 2.75rem); margin-bottom: 1.5rem; }
+        .content-grid img { width: 100%; height: auto; border-radius: 12px; }
+        
+        /* --- 5. Process & Breakdown Sections --- */
+        .process-section { background-color: var(--color-bg-grey); }
+        .process-image-full { width: 100%; border-radius: 16px; margin-bottom: 3rem; }
+        .process-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+        .process-steps-grid h3 { font-size: 1.25rem; margin-bottom: 1rem; }
+        
+        .breakdown-section h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+        .breakdown-item { margin-bottom: 2.5rem; }
+        .breakdown-item h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .breakdown-images { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+        
+        /* --- 6. FAQs Section --- */
+        .faq-section { background-color: var(--color-bg-grey); }
+        .faq-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: flex-start; }
+        @media (min-width: 992px) { .faq-grid { grid-template-columns: 1fr 1.5fr; } }
+        .faq-item { margin-bottom: 2rem; }
+        .faq-item h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+        
+        /* --- 7. Final CTA Banner --- */
+        .final-cta { background-color: var(--color-bg-grey); padding: 3rem; border-radius: 16px; position: relative; overflow: hidden; }
+        .cta-content { position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem; }
+        .cta-content h2 { font-size: 2rem; }
+        .cta-background-image { position: absolute; top: 0; left: 0; width: 50%; height: 100%; object-fit: cover; opacity: 0.1; }

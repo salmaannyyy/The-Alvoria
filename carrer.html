@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <link rel="stylesheet" href="Assists/css/Careers.css">
+    <link rel="stylesheet" href="Assists/css/style.css">
+
+    <!-- Google Fonts: Poppins & Onest -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Onest:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Boxicons for Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="Img/Alvoria logo (1).png" alt="Alvoria Logo">
+            </a>
+            <nav class="nav-links">
+                <div class="nav-item"><a href="#services" class="nav-link">Services</a><div class="dropdown"><div class="dropdown-menu mega-menu"></div></div></div>
+                <div class="nav-item"><a href="#" class="nav-link">Industries</a><div class="dropdown"><ul class="dropdown-menu"></ul></div></div>
+                <div class="nav-item"><a href="#stories" class="nav-link">Insights</a><div class="dropdown"><ul class="dropdown-menu"></ul></div></div>
+                <div class="nav-item"><a href="#" class="nav-link">About Us</a><div class="dropdown"><ul class="dropdown-menu"></ul></div></div>
+                <div class="nav-item"><a href="carrer.html" class="nav-link">Careers</a></div>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu"><i class='bx bx-menu'></i></button>
+        </div>
+        
+        <div class="mobile-menu-panel">
+            <div class="panel-container">
+                 <div class="panel-content" id="main-menu-panel">
+                    <div class="mobile-main-menu"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+  <main>
+        <section class="hero-section">
+             <svg class="doodle" id="doodle1" width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"><path d="M5 50 C 50 10, 150 90, 195 50" stroke-linecap="round"/></svg>
+             <svg class="doodle" id="doodle2" width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"><path d="M5 50 C 50 90, 150 10, 195 50" stroke-linecap="round"/></svg>
+
+            <div class="container">
+                <!-- <div class="glassdoor-badge">
+                    <span>glassdoor</span> — 5.0 <span class="stars">★★★★★</span>
+                </div> -->
+                <h1 class="hero-title" <i class="icon-sparkle"></i>>Design the career you love!</h1>
+                <p class="hero-text">At The Alvoria we are building a global team to create exceptional design everyday. If you are creative, ambitious and ready to join our mission, we'd love to hear from you!</p>
+                <a href="#" class="btn">Open roles</a>
+                
+                <div class="photo-collage">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7SyMHhL1nKpvJhpPjcpqRdF1cECQuBz4I9A&s" alt="Team photo 1" class="photo1">
+                    <img src="data:image/jpeg;base64,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" alt="Team photo 2" class="photo2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvhR7eO2K8bemIJsaNTGph8T2n4h5N-3i9vFOjtdSwNkAnqRksX4S6ppkxXExzGGo8e2E&usqp=CAU" alt="Team photo 3" class="photo3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBQcQQwoM9GdZad7LA8tQiNKOl_e5RcX3dfA&s" alt="Team photo 4" class="photo4">
+                </div>
+            </div>
+        </section>
+
+        <section class="passion-section">
+            <div class="container content-grid">
+                <div>
+                    <h2 class="section-title" style="text-align: left;">Our <i class="icon-sparkle"></i> shared passion - creating great design</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item"><div class="number">2023</div><div class="label">Founded</div></div>
+                        <div class="stat-item"><div class="number">15</div><div class="label">Countries</div></div>
+                        <div class="stat-item"><div class="number">35</div><div class="label">Team members</div></div>
+                    </div>
+                </div>
+                <div>
+                    <p>At The Alvoria we have some core beliefs that guide us in everything we do. We believe that exceptional design should be accessible to all businesses out there and that it can make or break a company.</p>
+                    <p>But being entrepreneurs for more than a decade we know how painful it can be to get high quality design done every day - and there is always too much to do. So we thought the time has come to change that and we have embarked on a mission to revolutionize the design industry.</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw8kHuV7mdVJvft6siiV8QwLIsqjfRz1U7pg&s" alt="World map with team member avatars">
+            </div>
+        </section>
+        
+        <section class="why-work-section">
+            <div class="container content-grid">
+                <div>
+                     <h2 class="section-title" style="text-align: left;">Why <i class="icon-sparkle"></i> you should work with <i class="icon-sparkle"></i> us?</h2>
+                     <p>We believe that The Alvoria will only succeed as a company if we assemble the best team and provide a work environment in which every individual can flourish.</p>
+                </div>
+                <div class="card-list">
+                    <div class="info-card">
+                        <div class="icon"><i class='bx bx-rocket'></i></div>
+                        <div><h3>Remote first</h3><p>From day one, we've been all about remote-first. No borders, no barriers – just a diverse team coming together from every corner to create great stuff together.</p></div>
+                    </div>
+                     <div class="info-card">
+                        <div class="icon"><i class='bx bx-trophy'></i></div>
+                        <div><h3>We win together!</h3><p>Building a company means going through ups and downs. So let's be proud if we hit a goal and celebrate each win, big or small together.</p></div>
+                    </div>
+                     <div class="info-card">
+                        <div class="icon"><i class='bx bxs-book-reader'></i></div>
+                        <div><h3>Learn & Grow!</h3><p>Growth never stops. We support you in developing your skills and celebrate each opportunity to become a better version of ourselves.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hiring-section" style="background-color: var(--color-bg-grey);">
+            <div class="container content-grid">
+                <div>
+                     <h2 class="section-title" style="text-align: left;">The Alvoria hires the top <i class="icon-sparkle"></i> talent worldwide</h2>
+                </div>
+                <div>
+                     <p>At The Alvoria, we believe in the power of exceptional talent. That's why we have built a rigorous process to only hire the best team members — experts that are ambitious, extremely motivated, creative and ready to go the extra mile.</p>
+                </div>
+            </div>
+             <div class="container">
+                <div class="hiring-chart">
+                    <div class="chart-bar"><div class="bar-wrapper"><div class="bar" style="height: 30%;"></div></div><div class="percentage">30%</div><div class="label">Work Example</div></div>
+                    <div class="chart-bar"><div class="bar-wrapper"><div class="bar" style="height: 20%;"></div></div><div class="percentage">20%</div><div class="label">Skill Set Interview</div></div>
+                    <div class="chart-bar"><div class="bar-wrapper"><div class="bar" style="height: 12%;"></div></div><div class="percentage">12%</div><div class="label">Demo Task</div></div>
+                    <div class="chart-bar"><div class="bar-wrapper"><div class="bar" style="height: 8%;"></div></div><div class="percentage">8%</div><div class="label">Culture Interview</div></div>
+                    <div class="chart-bar"><div class="bar-wrapper"><div class="bar" style="height: 3%;"></div></div><div class="percentage">3%</div><div class="label">Real Demo Projects</div></div>
+                    <div class="chart-bar"><div class="bar-wrapper"><div class="bar" style="height: 1%;"></div></div><div class="percentage">1%</div><div class="label">Joining the team</div></div>
+                </div>
+            </div>
+        </section>
+
+
+
+ <div class="jobs-container">
+        <nav class="jobs-nav">
+            <ul>
+                <li><a href="#" data-filter="all" class="active">All</a></li>
+                <li><a href="#" data-filter="webflow">Webflow</a></li>
+                <li><a href="#" data-filter="design">Design</a></li>
+                <li><a href="#" data-filter="marketing">Marketing</a></li>
+            </ul>
+        </nav>
+
+        <div class="job-listings">
+            <div class="job-item" data-category="marketing">
+                <div class="job-header">
+                    <span class="job-tag marketing">Marketing</span>
+                </div>
+                <h2 class="job-title">Growth Marketing Manager</h2>
+                <p class="job-description">We're looking for a hands-on Growth Marketing Manager to own and scale our lead...</p>
+                <div class="job-footer">
+                    <a href="#" class="view-job">View job →</a>
+                    <div class="job-meta">
+                        <span class="job-location">Berlin or Remote</span>
+                        <span class="job-type">Full-Time</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-item" data-category="design">
+                <div class="job-header">
+                    <span class="job-tag design">Design</span>
+                </div>
+                <h2 class="job-title">(Junior-) Art Director</h2>
+                <p class="job-description">Your dream is to work for a young and innovative startup and manage creative projects f...</p>
+                <div class="job-footer">
+                    <a href="#" class="view-job">View job →</a>
+                    <div class="job-meta">
+                        <span class="job-location">Remote</span>
+                        <span class="job-type">Full-Time</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-item" data-category="webflow">
+                <div class="job-header">
+                    <span class="job-tag webflow">(Junior-) Webflow Project Manager</span>
+                </div>
+                <h2 class="job-title">(Junior-) Webflow Project Manager</h2>
+                <p class="job-description">Your dream is to work for a hands-on innovative startup and manage creative Webflow...</p>
+                <div class="job-footer">
+                    <a href="#" class="view-job">View job →</a>
+                    <div class="job-meta">
+                        <span class="job-location">Berlin or Remote</span>
+                        <span class="job-type">Full-Time</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+      
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo"><img src="Img/Alvoria logo (1).png" alt="Alvoria Logo"></a>
+                    <p>A tagline describing the company's mission or value proposition goes here. Short, sweet, and memorable.</p>
+                    <div class="social-icons"><a href="#"><i class='bx bxl-linkedin-square'></i></a><a href="#"><i class='bx bxl-twitter'></i></a></div>
+                </div>
+                <div class="footer-links"><h4>Quick Navigation</h4><ul><li><a href="#">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#">Industries</a></li><li><a href="#">Careers</a></li></ul></div>
+                <div class="footer-contact"><h4>Contact</h4><p><i class='bx bxs-map'></i> 123 Business Rd, Cityville</p><p><i class='bx bxs-phone'></i> (123) 456-7890</p><p><i class='bx bxs-envelope'></i> contact@alvoria.com</p></div>
+            </div>
+            <div class="footer-bottom"><p>© 2024 The Alvoria. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+
+   <script src="Assists/js/script.js"></script>
+   <script src="Assists/js/carrer.js"></script>
+
+</body>
+</html>

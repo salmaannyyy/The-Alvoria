@@ -1,0 +1,71 @@
+   :root {
+            --color-bg-light: #FFFFFF;
+            --color-bg-grey: #F8F9FA;
+            --color-text-primary: #111827;
+            --color-text-secondary: #4B5563;
+            --color-accent-blue: #3B82F6;
+            --color-accent-purple: #18C0C1;
+            --color-accent-gradient: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-purple));
+            --color-border: #E5E7EB;
+            --font-family: 'Inter', sans-serif;
+            --transition-speed: 0.3s;
+        }
+
+        /* --- 2. General Setup --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-family); background-color: var(--color-bg-light); color: var(--color-text-primary); }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 5rem 0; overflow: hidden; }
+        
+        /* --- 3. Hero Section --- */
+        .hero-section { background: var(--color-accent-gradient); color: white; }
+        .hero-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+        @media (min-width: 992px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
+        .hero-title { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; }
+        .hero-list { list-style: none; margin: 2rem 0; }
+        .hero-list li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; }
+        .hero-list li::before { content: '›'; position: absolute; left: 0; font-weight: bold; font-size: 1.5rem; line-height: 1; }
+        .btn { padding: 0.8rem 2rem; text-decoration: none; font-weight: 600; border-radius: 8px; transition: all var(--transition-speed); }
+        .btn-light { background-color: white; color: var(--color-accent-blue); }
+        .btn-light:hover { background-color: #f0f0f0; }
+        .hero-graphic { perspective: 1000px; }
+        .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; transform: rotateY(-20deg) rotateX(10deg); }
+        .photo-grid img { width: 100%; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        /* --- 4. Consulting Services Section --- */
+        .consulting-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; }
+        @media (min-width: 992px) { .consulting-grid { grid-template-columns: 1fr 1fr; } }
+        .vertical-nav { position: relative; padding-left: 2rem; }
+        .vertical-nav-line { position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background-color: var(--color-border); }
+        .vertical-nav-dot { position: absolute; left: -7px; width: 16px; height: 16px; background-color: var(--color-accent-blue); border-radius: 50%; transition: top var(--transition-speed) ease; }
+        .nav-item button { background: none; border: none; font-family: inherit; font-size: 1.5rem; font-weight: 700; color: #D1D5DB; cursor: pointer; text-align: left; padding: 1rem 0; transition: color var(--transition-speed); }
+        .nav-item button.active { color: var(--color-accent-blue); }
+        .nav-content { display: none; }
+        .nav-content.active { display: block; }
+        .contact-form-wrapper { background-color: var(--color-bg-grey); padding: 2.5rem; border-radius: 16px; }
+        .form-input { width: 100%; padding: 0.8rem 1rem; margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; font-size: 1rem; }
+        .form-input:focus { outline: 2px solid var(--color-accent-blue); }
+        .btn-outline { border: 2px solid var(--color-accent-blue); color: var(--color-accent-blue); background: none; }
+        .btn-outline:hover { background: var(--color-accent-blue); color: white; }
+
+        /* --- 5. Partnership Tabs Section --- */
+        .tabs-nav { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; }
+        .tab-btn { background: none; border: 1px solid transparent; padding: 1rem 1.5rem; border-radius: 12px; font-weight: 600; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+        .tab-btn.active { background-color: white; border-color: var(--color-border); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .tab-content-wrapper { position: relative; }
+        .tab-content { display: none; }
+        .tab-content.active { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; animation: fadeIn 0.5s ease; }
+        @media (min-width: 768px) { .tab-content.active { grid-template-columns: 1fr 1fr; } }
+        .tab-image { position: relative; }
+        .tab-image img { width: 100%; border-radius: 12px; }
+        .tab-image::after { content: ''; position: absolute; bottom: -10px; left: 0; right: 0; height: 10px; background: var(--color-accent-gradient); border-radius: 0 0 12px 12px; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* --- 6. FAQ Section --- */
+        .faq-section { background: var(--color-accent-gradient); color: white; }
+        .faq-item { border-bottom: 1px solid rgba(255,255,255,0.2); }
+        .faq-question { display: flex; align-items: center; gap: 1rem; width: 100%; background: none; border: none; padding: 1.5rem 0; text-align: left; font-size: 1.1rem; font-weight: 600; color: white; cursor: pointer; }
+        .faq-number { font-weight: 700; color: rgba(255,255,255,0.7); }
+        .faq-icon { margin-left: auto; transition: transform var(--transition-speed); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height var(--transition-speed) ease-out; color: #E5E7EB; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }

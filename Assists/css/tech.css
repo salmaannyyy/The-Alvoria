@@ -1,0 +1,199 @@
+section {
+            padding: 6rem 0;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* --- 3. Hero Section --- */
+        .hero-section {
+            padding-top: 8rem;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        @media (min-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1.2fr 1fr;
+            }
+        }
+        
+        .hero-title {
+            font-size: clamp(2.8rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        .hero-title .highlight {
+            background: var(--color-accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero-text {
+            color: var(--color-text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 500px;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            background: var(--color-accent-gradient);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .secondary-text {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            max-width: 250px;
+        }
+        
+        .hero-graphic {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .laptop-icon {
+            width: 180px;
+            height: 180px;
+            background: var(--color-accent-gradient);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .laptop-icon i {
+            font-size: 4rem;
+        }
+        .laptop-icon span {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .orbit-icon {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: var(--color-bg-light);
+            border: 1px solid var(--color-border);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: var(--color-text-primary);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        /* Positioning orbiting icons */
+        .orbit-icon:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
+        .orbit-icon:nth-child(2) { top: 25%; right: 0; transform: translateY(-50%); animation-delay: -0.6s; }
+        .orbit-icon:nth-child(3) { bottom: 25%; right: 0; transform: translateY(50%); animation-delay: -1.2s; }
+        .orbit-icon:nth-child(4) { bottom: 0; left: 50%; transform: translateX(-50%); animation-delay: -1.8s; }
+        .orbit-icon:nth-child(5) { bottom: 25%; left: 0; transform: translateY(50%); animation-delay: -2.4s; }
+        .orbit-icon:nth-child(6) { top: 25%; left: 0; transform: translateY(-50%); animation-delay: -3s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* --- 4. Pain Points Section --- */
+        .pain-points-section {
+            background-color: var(--color-bg-grey);
+        }
+        
+        .pain-points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .pain-point-card {
+            background-color: var(--color-bg-light);
+            border: 1px solid var(--color-border);
+            padding: 1.5rem;
+            border-radius: 16px;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pain-point-card p {
+            font-weight: 500;
+        }
+        
+        .pain-point-card .icon {
+            font-size: 2.5rem;
+            color: var(--color-text-secondary);
+            margin-right: 1rem;
+        }
+        
+        .pain-point-card.emoji {
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .section-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        /* --- 5. SaaS Sectors Section --- */
+        .sectors-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .sector-tag {
+            padding: 0.6rem 1.5rem;
+            border: 2px solid var(--color-border);
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all var(--transition-speed);
+        }
+        
+        .sector-tag:hover {
+            border-color: var(--color-text-primary);
+        }
+        
+        .sector-tag.highlighted {
+            background: var(--color-text-primary);
+            border-color: var(--color-text-primary);
+            color: white;
+        }

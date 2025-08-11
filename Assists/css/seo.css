@@ -1,0 +1,111 @@
+  :root {
+            --color-bg-light: #FFFFFF;
+            --color-bg-grey: #F8F9FA;
+            --color-text-primary: #111827;
+            --color-text-secondary: #4B5563;
+            --color-accent-gradient: linear-gradient(90deg, #18C0C1, #18C0C1);
+            --color-border: #E5E7EB;
+            --font-family: 'Inter', sans-serif;
+            --transition-speed: 0.3s;
+        }
+        /* --- 2. General Setup --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-family); background-color: var(--color-bg-light); color: var(--color-text-primary); }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 6rem 0; }
+        .section-title { font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 700; text-align: center; margin-bottom: 1rem; }
+        .section-subtitle { text-align: center; max-width: 600px; margin: 0 auto 3rem; color: var(--color-text-secondary); line-height: 1.6; }
+        /* --- 3. Hero Section --- */
+        .hero-section { background-color: var(--color-bg-grey); padding-top: 8rem; padding-bottom: 8rem; }
+        .hero-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
+        @media (min-width: 992px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
+        .hero-title { font-size: clamp(2.8rem, 6vw, 4rem); font-weight: 800; line-height: 1.2; }
+        .hero-title .highlight { background: var(--color-accent-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero-text { color: var(--color-text-secondary); font-size: 1.1rem; line-height: 1.7; max-width: 500px; margin: 1.5rem 0 2rem; }
+        .cta-group { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; }
+        .btn { padding: 0.8rem 2rem; background: var(--color-accent-gradient); color: white; text-decoration: none; font-weight: 600; border-radius: 50px; transition: all var(--transition-speed); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .secondary-text { color: var(--color-text-secondary); font-size: 0.9rem; max-width: 250px; }
+        
+        .hero-graphic { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; max-width: 400px; margin: 0 auto; }
+        .hexagon { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); background-color: #ccc; aspect-ratio: 1 / 1.15; }
+        .hexagon img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+        .hexagon.rating { background-color: var(--color-bg-light); border: 1px solid var(--color-border); display: flex; flex-direction: column; justify-content: center; align-items: center; font-weight: 600; }
+        .hexagon.rating .score { font-size: 1.2rem; }
+        .hexagon.rating .star { color: #F59E0B; }
+        .hexagon.clutch { grid-column: 2 / 3; }
+        .hexagon.sortlist { grid-column: 2 / 3; }
+        /* --- 4. Pain Points Section --- */
+        .pain-points-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .pain-point-card { background-color: var(--color-bg-grey); border: 1px solid var(--color-border); padding: 2rem; border-radius: 16px; min-height: 120px; }
+        .pain-point-card.highlighted { border-color: #A78BFA; box-shadow: 0 0 15px rgba(167, 139, 250, 0.3); }
+        
+        /* --- 5. Services Carousel --- */
+        .services-carousel-wrapper { position: relative; }
+        .services-nav { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; }
+        .nav-dot { width: 12px; height: 12px; border-radius: 50%; background-color: var(--color-border); cursor: pointer; transition: background-color var(--transition-speed); }
+        .nav-dot.active { background-color: var(--color-text-primary); }
+        .services-viewport { overflow: hidden; }
+        .services-track { display: flex; transition: transform var(--transition-speed) ease; }
+        .service-slide { flex: 0 0 100%; padding: 0 0.5rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .service-card { background-color: var(--color-bg-grey); padding: 2rem; border-radius: 16px; }
+        .service-card .tags-container { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+        .service-card .tag { background-color: white; border: 1px solid var(--color-border); padding: 0.3rem 0.8rem; font-size: 0.8rem; border-radius: 50px; }
+        /* --- 6. Team, Why SEO, and Pricing --- */
+        .team-chart { text-align: center; }
+        .team-chart img { max-width: 100%; height: auto; }
+        
+        .why-seo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); border-radius: 16px; overflow: hidden; }
+        .why-seo-card { padding: 2rem; color: white; }
+        .why-seo-card:nth-child(1) { background-color: #4F46E5; }
+        .why-seo-card:nth-child(2) { background-color: #1F2937; }
+        .why-seo-card:nth-child(3) { background-color: #9333EA; }
+        .why-seo-card:nth-child(4) { background-color: #7C3AED; }
+        
+        .stat-bar { margin-top: 2rem; padding: 1.5rem; border: 2px solid #F472B6; border-radius: 16px; text-align: center; }
+        .stat-bar .percentage { font-size: 2.5rem; font-weight: 800; }
+        
+        .pricing-toggles { display: flex; justify-content: center; background-color: var(--color-bg-grey); border-radius: 50px; padding: 0.5rem; margin-bottom: 2rem; max-width: fit-content; margin-left: auto; margin-right: auto; }
+        .pricing-toggle { padding: 0.6rem 1.5rem; border: none; background: none; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all var(--transition-speed); }
+        .pricing-toggle.active { background-color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+        .pricing-plan { background-color: var(--color-bg-grey); padding: 2rem; border-radius: 16px; position: relative; transition: transform var(--transition-speed), box-shadow var(--transition-speed); }
+        .pricing-plan:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .pricing-plan.highlighted { background: var(--color-accent-gradient); color: white; transform: scale(1.05); }
+        .pricing-plan.highlighted:hover { transform: scale(1.05) translateY(-5px); }
+        .pricing-plan h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .pricing-plan h3 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .pricing-plan p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+        .pricing-plan .plan-price { font-size: 2.5rem; font-weight: 700; }
+        .pricing-plan .price-period { font-size: 1rem; opacity: 0.8; }
+        .pricing-plan .btn-plan { width: 100%; padding: 0.8rem; background: white; color: var(--color-text-primary); border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all var(--transition-speed); }
+        .pricing-plan.highlighted .btn-plan { background: var(--color-text-primary); color: white; }
+        .pricing-plan .btn-plan:hover { background: var(--color-accent-gradient); color: white; }
+        .pricing-plan .plan-features { margin-top: 1.5rem; }
+        .pricing-plan .plan-features li { list-style: none; padding: 0.5rem 0; display: flex; align-items: center; }
+        .pricing-plan .plan-features li::before { content: '\2713'; margin-right: 0.5rem; color: #10B981; font-weight: bold; }
+        .pricing-plan .badge { position: absolute; top: -10px; right: 20px; background: #F472B6; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        
+        /* --- 7. FAQ Section --- */
+        .faq-section { background-color: var(--color-bg-grey); }
+        .faq-accordion { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--color-border); margin-bottom: 1rem; }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; width: 100%; background: none; border: none; padding: 1.5rem 0; text-align: left; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: color var(--transition-speed); }
+        .faq-question:hover { color: #4F46E5; }
+        .faq-question i { transition: transform var(--transition-speed); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height var(--transition-speed) ease-out; padding: 0 0 1.5rem; }
+        .faq-answer p { line-height: 1.6; color: var(--color-text-secondary); }
+        .faq-item.active .faq-question i { transform: rotate(45deg); }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        
+        /* --- 8. Process & CTA --- */
+        .process-timeline { display: flex; flex-direction: column; gap: 2rem; max-width: 800px; margin: 0 auto; }
+        .process-step { display: flex; align-items: flex-start; gap: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 2rem; }
+        .step-number { font-size: 1.2rem; color: var(--color-text-secondary); }
+        
+        .cta-section { text-align: center; background-color: var(--color-bg-grey); border-radius: 16px; padding: 3rem; }
+        .cta-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .cta-section p { margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+ 

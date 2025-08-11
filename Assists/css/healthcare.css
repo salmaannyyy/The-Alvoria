@@ -1,0 +1,233 @@
+   section {
+            padding: 5rem 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        p {
+            line-height: 1.7;
+            color: var(--color-text-secondary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--color-carousel-blue);
+            color: var(--color-text-light);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: background-color var(--transition-speed);
+        }
+
+        .btn:hover {
+            background-color: var(--color-carousel-btn);
+        }
+
+        /* --- 3. Hero Section --- */
+        .hero-section {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--color-text-light);
+            /* background: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.7)), url('https://images.unsplash.com/photo-1579684385127-6ab18a5d7814?q=80&w=1632&auto=format&fit=crop') no-repeat center center/cover; */
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            
+        }
+        
+        /* --- 4. Main Content Sections --- */
+        .intro-section h2 {
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+        .intro-section p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .strategies-section {
+            background-color: var(--color-bg-grey);
+            /* Subtle texture background from HeroPatterns.com */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        @media (min-width: 992px) {
+            .grid-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .grid-layout h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .key-stats {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+        }
+        .key-stats h4 {
+            font-weight: 600;
+            color: var(--color-accent-blue);
+            margin-bottom: 1rem;
+        }
+        .key-stats ul {
+            list-style-type: '✓  ';
+            padding-left: 1.5rem;
+        }
+        .key-stats li {
+            margin-bottom: 0.75rem;
+            color: var(--color-text-secondary);
+        }
+        
+        .strategies-list ol {
+            list-style: none;
+            counter-reset: strategies-counter;
+        }
+        .strategies-list li {
+            counter-increment: strategies-counter;
+            margin-bottom: 1.5rem;
+            padding-left: 2.5rem;
+            position: relative;
+        }
+        .strategies-list li::before {
+            content: counter(strategies-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-accent-blue);
+            background-color: #eaf2ff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .strategies-list strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        /* --- 5. Testimonial Snippet Section --- */
+        .testimonial-snippet {
+            padding: 5rem 0;
+        }
+
+        .testimonial-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-light);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        @media (min-width: 992px) {
+            .testimonial-card {
+                grid-template-columns: 350px 1fr;
+            }
+        }
+        
+        .testimonial-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        @media (min-width: 992px) {
+            .testimonial-image {
+                height: 100%;
+            }
+        }
+        
+        .testimonial-content {
+            padding: 3rem;
+        }
+        
+        .testimonial-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-text {
+            color: #d1d5db;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-results {
+            display: flex;
+            gap: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+        }
+        
+        .result-item h4 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-accent-blue);
+        }
+        
+        .result-item p {
+            color: #9ca3af;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- 6. Buyer's Journey Section --- */
+        .three-col-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        
+        @media (min-width: 992px) {
+            .three-col-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .three-col-grid h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
