@@ -1,144 +1,161 @@
+/* --- Global Styles & Font Imports --- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
-        /* --- 3. Page Header Section --- */
-        .page-case {
-            text-align: center;
-            padding: 5rem 0 3rem;
-        }
 
-        .page-case .eyebrow {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--color-accent);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
 
-        .page-case .title {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
 
-        .page-case .subtitle {
-            font-size: 1.1rem;
-            color: var(--color-text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
+/* --- Section Header --- */
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto 4rem auto;
+}
 
-        /* --- 4. Main Article Content --- */
-        .case-study-content {
-            background-color: var(--color-bg-content);
-            padding: 3rem 0;
-            border-top: 1px solid var(--color-border);
-            border-bottom: 1px solid var(--color-border);
-        }
+.section-header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 1.5rem;
+}
 
-        .article-section {
-            margin-bottom: 3rem;
-        }
+.section-header p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444444;
+}
 
-        .article-section h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.3;
-        }
+/* --- Card Grid --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem 2rem;
+}
 
-        .article-section p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--color-text-secondary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .article-image {
-            width: 100%;
-            border-radius: 12px;
-            margin-bottom: 3rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        }
+.card {
+    display: flex;
+    flex-direction: column;
+}
 
-        /* --- 5. "More Case Studies" Section --- */
-        .more-studies-section {
-            padding: 5rem 0;
-        }
-        
-        .more-studies-container {
-             max-width: 1100px; /* Wider container for the grid */
-        }
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-        }
+.card-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 0.75rem 0;
+}
 
-        .studies-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-        
-        @media (min-width: 768px) {
-            .studies-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+.card-title a {
+    text-decoration: none;
+    color: #111111;
+    transition: color 0.2s ease-in-out;
+}
 
-        .study-card {
-            display: block; /* Makes the whole card a link */
-            text-decoration: none;
-            background-color: var(--color-bg-content);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
-            border: 1px solid var(--color-border);
-            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-        }
+.card-title a:hover {
+    color: #0073e6; /* A shade of blue for hover */
+}
 
-        .study-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.07);
-        }
+/* The blue arrow icon */
+.card-title a::after {
+    content: ' ›'; /* Using the greater-than sign for the arrow */
+    color: #0073e6;
+    font-weight: 700;
+}
 
-        .card-image-wrapper {
-            position: relative;
-            height: 250px;
-        }
+.card-meta {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #555555;
+    margin: 0;
+}
 
-        .card-image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+/* --- Blog Section --- */
+.blog-section {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #cccccc;
+}
 
-        .card-image-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 1rem 1.5rem;
-            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
-        }
+.section-eyebrow {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    margin: 0 0 2rem 0;
+    text-transform: uppercase;
+}
 
-        .card-image-overlay .eyebrow {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
+.section-eyebrow a {
+    color: #111;
+    text-decoration: none;
+}
 
-        .card-content {
-            padding: 1.5rem;
-        }
+/* Adjust grid for the 3-column blog section */
+.blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
 
-        .card-content h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            line-height: 1.4;
-            color: var(--color-text-primary);
-        }
-   
+.see-all-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.see-all-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.see-all-link:hover {
+    color: #0073e6;
+}
+
+/* The blue arrow for the "See all" link */
+.see-all-link::after {
+    content: ' ›';
+    color: #0073e6;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blog-grid {
+       grid-template-columns: repeat(2, 1fr);
+    }
+    .blog-grid .card:last-child {
+        grid-column: 1 / -1; /* Make the last card span full width if it's alone */
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header h1 {
+        font-size: 2rem;
+    }
+    .section-header p {
+        font-size: 1rem;
+    }
+    .card-grid, .blog-grid {
+        grid-template-columns: 1fr;
+    }
+     .blog-grid .card:last-child {
+        max-width: 100%;
+    }
+}

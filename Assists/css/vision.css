@@ -13,7 +13,7 @@ section {
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1470&auto=format&fit=crop') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://fieldedge.com/wp-content/uploads/2021/08/businessman-hand-holding-blocks.jpeg') no-repeat center center/cover;
             color: white;
             padding: 5rem 1.5rem;
         }
@@ -32,241 +32,161 @@ section {
             opacity: 0.9;
         }
         
-        .job-search-form {
+         
+       
+        
+        .cards-container {
             display: flex;
-            width: 100%;
-            max-width: 600px;
-            background-color: white;
-            border-radius: 50px;
-            padding: 0.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .job-search-form input {
-            flex-grow: 1;
-            border: none;
-            background: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            font-family: inherit;
-        }
-        .job-search-form input:focus {
-            outline: none;
-        }
-        
-        .job-search-form button {
-            background-color: var(--color-primary-blue);
-            color: white;
-            border: none;
-            padding: 0 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color var(--transition-speed);
-        }
-        .job-search-form button:hover {
-            background-color: var(--color-primary-blue-hover);
-        }
-
-        /* --- 4. Content Sections --- */
-        .section-title {
-            font-size: clamp(2rem, 4vw, 2.75rem);
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .benefit-card {
-            background-color: var(--color-bg-light);
-            padding: 2.5rem 2rem;
-            text-align: center;
-            border: 1px solid var(--color-border);
-            border-radius: 12px;
-            transition: all var(--transition-speed) ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .benefit-card .icon {
-            font-size: 3rem;
-            color: var(--color-primary-blue);
-            margin-bottom: 1.5rem;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .benefit-card p {
-            color: var(--color-text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-        
-        /* --- 5. "Life at Systems" Section --- */
-        .life-section {
-            background-color: var(--color-bg-grey);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Decorative background pattern */
-        .life-section::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            left: -100px;
-            width: 300px;
-            height: 300px;
-            background-image: radial-gradient(circle, var(--color-border) 2px, transparent 2px);
-            background-size: 20px 20px;
-            opacity: 0.5;
-        }
-
-        .life-section .container {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .life-section p {
-            max-width: 700px;
-            margin: 0 auto 3rem;
-        }
-        
-        .video-placeholder {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            aspect-ratio: 16 / 9;
-            background-color: #e0e0e0;
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
             align-items: center;
-            background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop');
-            background-size: cover;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+            margin-bottom: 60px;
+            margin-top: 60px;
         }
-
-        .play-button {
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 320px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .vision {
+            background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+            color: white;
+            margin-right: 20px;
+        }
+        
+        .mission {
+            background: linear-gradient(135deg, #2dce89 0%, #2dcecc 100%);
+            color: white;
+            margin-left: 20px;
+        }
+        
+        .icon-container {
             width: 80px;
             height: 80px;
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(5px);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 3rem;
-            color: var(--color-primary-blue);
-            cursor: pointer;
-            transition: transform var(--transition-speed);
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.2);
         }
-        .play-button:hover {
-            transform: scale(1.1);
+        
+        .vision .icon-container {
+            background: rgba(255, 255, 255, 0.2);
         }
-
-.opportunities-section {
-    width: 100%;
-    justify-content: center;
-    padding: 2rem;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    color: #1a202c;
-    margin-bottom: 2rem;
-}
-
-.jobs-filter {
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
-    margin-bottom: 3rem;
-}
-
-.filter-link {
-    text-decoration: none;
-    color: #4a5568;
-    font-weight: 600;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s, border-color 0.3s;
-}
-
-.filter-link:hover {
-    color: #1a202c;
-}
-
-.filter-link.active {
-    color: #1a202c;
-    border-bottom-color: #1a202c;
-}
-
-.job-listings {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.job-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.job-item:last-child {
-    border-bottom: none;
-}
-
-.job-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1a202c;
-    margin: 0 0 0.75rem 0;
-}
-
-.job-meta {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    font-size: 0.9rem;
-    color: #4a5568;
-}
-
-.meta-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.icon {
-    opacity: 0.7;
-}
-
-.view-details-link {
-    text-decoration: none;
-    color: #2d3748;
-    font-weight: 600;
-    white-space: nowrap; /* Prevents link from wrapping */
-    transition: color 0.3s;
-}
-
-.view-details-link:hover {
-    color: #000;
-}
+        
+        .mission .icon-container {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .card i {
+            font-size: 36px;
+        }
+        
+        .card h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .card p {
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .connector {
+            position: relative;
+            width: 100px;
+            height: 4px;
+            background: #8898aa;
+            margin: 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .connector::before {
+            content: '';
+            position: absolute;
+            right: -10px;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 15px solid #8898aa;
+        }
+        
+        .step-label {
+            position: absolute;
+            top: -15px;
+            background: #8898aa;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .vision .step-label {
+            left: 20px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .mission .step-label {
+            right: 20px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        argin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .cards-container {
+                flex-direction: column;
+            }
+            
+            .card {
+                width: 100%;
+                max-width: 320px;
+                margin: 15px 0;
+            }
+            
+            .vision, .mission {
+                margin: 15px 0;
+            }
+            
+            .connector {
+                width: 4px;
+                height: 50px;
+                margin: 15px 0;
+            }
+            
+            .connector::before {
+                top: auto;
+                bottom: -10px;
+                right: auto;
+                left: -5px;
+                border-top: 15px solid #8898aa;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: none;
+            }
+        }

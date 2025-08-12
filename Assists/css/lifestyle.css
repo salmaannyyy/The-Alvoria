@@ -3,6 +3,7 @@
         .hero-section {
             text-align: center;
             padding: 10rem 0 4rem;
+            background-color: black;
         }
 
         .hero-title {
@@ -11,6 +12,7 @@
             letter-spacing: -0.04em;
             line-height: 1;
             margin-bottom: 2rem;
+            color: white;
         }
 
         .hero-subtitle {
@@ -20,11 +22,13 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            color: white;
+
         }
         
         .hero-text {
             font-size: 1.1rem;
-            color: var(--color-text-secondary);
+            color: white;
             max-width: 600px;
             margin: 0 auto 2.5rem;
             line-height: 1.6;
@@ -59,3 +63,7 @@
         .gallery-item:hover img {
             transform: scale(1.03);
         }
+        .btn { position: relative; padding: 1rem 2rem; background: transparent; border: 2px solid var(--border-color); color: var(--color-text); text-decoration: none; font-weight: 600; transition: color var(--transition-speed); z-index: 1; }
+        .btn::before { content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 0; background-color: var(--color-text); z-index: -1; transition: width var(--transition-speed) ease-in-out; }
+        .btn:hover::before { width: 100%; }
+        .btn:hover { color: white; border-color: var(--color-text); }

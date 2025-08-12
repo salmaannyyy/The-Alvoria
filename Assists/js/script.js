@@ -58,7 +58,7 @@
                 { text: "Blog", href: "blogs.html" }, 
                 { text: "Case Studies", href: "casestudies.html" },
                 { text: "Industry Trends", href: "industrytrends.html" },
-                { text: "Founder's Voice", href: "founders.html" }
+               
             ] 
         }, 
         "About Us": { 
@@ -66,6 +66,7 @@
             items: [
                 // { text: "Our Story", href: "ourstory.html" }, 
                 { text: "Vision & Mission", href: "vision.html" },
+                 { text: "Founder's Voice", href: "founders.html" }
                 // { text: "The Team", href: "Team.html" }
             ] 
         }, 
@@ -254,6 +255,24 @@
             });
         });
 
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
 
 
         

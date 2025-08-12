@@ -1,34 +1,44 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Services Carousel ---
-    const track = document.querySelector('.services-track');
-    if (track) {
-        const slides = Array.from(track.children);
-        const dots = document.querySelectorAll('.nav-dot');
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        
-        const moveToSlide = (targetIndex) => {
-            track.style.transform = `translateX(-${slideWidth * targetIndex}px)`;
-            dots.forEach((dot, index) => dot.classList.toggle('active', index === targetIndex));
-        };
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => moveToSlide(index));
-        });
-    }
-
-    // --- Pricing Toggle ---
-    const toggles = document.querySelectorAll('.pricing-toggle');
-    if (toggles.length > 0) {
-        const prices = document.querySelectorAll('.plan-price');
-        toggles.forEach(toggle => {
-            toggle.addEventListener('click', () => {
-                toggles.forEach(t => t.classList.remove('active'));
-                toggle.classList.add('active');
-                const period = toggle.dataset.period;
-                prices.forEach(priceEl => {
-                    priceEl.textContent = priceEl.dataset[`price-${period}`];
+  // FAQ Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                
+                question.addEventListener('click', () => {
+                    // Close other open items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-answer').classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    answer.classList.toggle('active');
                 });
             });
         });
-    }
-});
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.service-card, .feature-item, .faq-item').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    

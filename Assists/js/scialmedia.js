@@ -1,26 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const accordionItems = document.querySelectorAll('.faq-item');
-
-    accordionItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        const icon = item.querySelector('.faq-icon');
-
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-
-            // Optional: Close all other items
-            accordionItems.forEach(otherItem => {
-                otherItem.classList.remove('active');
-                otherItem.querySelector('.faq-answer').style.maxHeight = '0';
-                otherItem.querySelector('.faq-icon').textContent = '+';
+ // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
             });
-
-            if (!isActive) {
-                item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                icon.textContent = '−';
-            }
         });
-    });
-});
+    

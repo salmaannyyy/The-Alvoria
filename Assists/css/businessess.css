@@ -23,7 +23,7 @@
         }
 
         .highlight {
-            color: var(--color-accent-secondary);
+            color: var(--color-bg-light);
         }
 
         /* --- 3. Hero Section --- */
