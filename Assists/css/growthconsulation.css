@@ -18,7 +18,8 @@
         section { padding: 5rem 0; overflow: hidden; }
         
         /* --- 3. Hero Section --- */
-        .hero-section { background: var(--color-accent-gradient); color: white; }
+        .hero-section {             background: linear-gradient(to bottom, var(--color-accent-teal), var(--color-bg-grey));
+; color: rgb(29, 26, 26); }
         .hero-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
         @media (min-width: 992px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
         .hero-title { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; }

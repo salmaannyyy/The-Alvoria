@@ -37,7 +37,8 @@
         .section-title { font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 800; text-align: center; margin-bottom: 3rem; }
         
         /* --- 3. Hero Section --- */
-        .hero-section { background: var(--color-accent-teal); color: white; text-align: center; }
+        .hero-section {  background: linear-gradient(to bottom, var(--color-accent-teal), var(--color-bg-grey));
+; color: rgb(29, 26, 26); color: rgb(27, 26, 26); text-align: center; }
         .hero-title { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.2; margin-bottom: 1.5rem; }
         .hero-text { max-width: 600px; margin: 0 auto 2.5rem; opacity: 0.9; }
         .cta-group { display: flex; justify-content: center; align-items: center; gap: 2rem; }

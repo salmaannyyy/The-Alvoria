@@ -267,11 +267,50 @@
         .footer-about .logo img { margin-bottom: 1rem; background-blend-mode: color-burn; }
         .footer-about p { color: #a9a9a9; margin-bottom: 1.5rem; line-height: 1.7; }
         .social-icons { display: flex; gap: 1rem; }
-        .social-icons a { font-size: 1.5rem; color: var(--color-footer-text); transition: all var(--transition-speed); }
+        .social-icons a { font-size: 1.5rem; color: var(--color-accent-teal); transition: all var(--transition-speed); }
         .social-icons a:hover { color: var(--color-accent-teal); transform: translateY(-2px); }
         .footer-links ul li { margin-bottom: 0.75rem; }
         .footer-links ul a { color: #a9a9a9; transition: color var(--transition-speed); }
         .footer-links ul a:hover { color: var(--color-accent-teal); }
+        .footer-contact i {color: var(--color-accent-teal); }
         .footer-contact p { margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; color: #a9a9a9; }
         .footer-bottom { border-top: 1px solid #444; padding-top: 2rem; text-align: center; font-size: 0.9rem; color: #a9a9a9; }
    
+/* Email subscription section styles */
+.footer-email p {
+    color: #a9a9a9;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+.subscribe-form {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    
+}
+.subscribe-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #444;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 4px;
+    font-family: inherit;
+    
+}
+.subscribe-form input::placeholder {
+    color: #a9a9a9;
+}
+.subscribe-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-accent-teal);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+.subscribe-form button:hover {
+    background-color: #008f8f;
+}

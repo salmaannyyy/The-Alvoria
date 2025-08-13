@@ -31,7 +31,8 @@
             align-items: center;
             min-height: 100vh;
             padding: 2rem;
-            background: linear-gradient(135deg, #252d3a 0%, #e4e8f0 100%);
+         background: linear-gradient(to bottom, var(--color-accent-teal), var(--color-bg-grey));
+; color: rgb(29, 26, 26); color: rgb(27, 26, 26);
             position: relative;
             overflow: hidden;
         }

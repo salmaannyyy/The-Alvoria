@@ -12,7 +12,7 @@
             --border-color: #e5e7eb;
             --color-progress-bar: #86BC25;
             --color-carousel-btn: #0073e6;
-            --color-green-primary: #a3f700;
+            --color-green-primary: #18C0C1;
             --color-green-gradient: linear-gradient(135deg, #18C0C1 0%, #18C0C1 100%);
             --color-green-dark: #2a331e;
                --color-bg-light: #FFFFFF;
@@ -20,151 +20,127 @@
             --color-text-primary: #111827;
             --color-text-secondary: #4B5563;
             --color-text-light: #000000;
-            --color-accent: #DFFF00; /* Lime-yellow from the example */
-            --color-accent-hover: #c8e600;
+            --color-accent: #18C0C1; /* Lime-yellow from the example */
+            --color-accent-hover: #18C0C1;
             --color-border: #E5E7EB;
             --font-family: 'Inter', sans-serif;
             --transition-speed: 0.3s;
         }
-
-        /* --- 2. General Setup --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-family);
-            background-color: var(--color-bg-light);
-            color: var(--color-text-primary);
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        section {
-            padding: 6rem 0;
-        }
-        
-        h1, h2, h3 {
-            font-weight: 700;
-        }
-
-        /* --- 3. Hero Section Grid Layout --- */
-         .hero-section-hero{
-            display: grid;
-            grid-template-columns: 1fr;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        @media (min-width: 992px) {
-            .hero-section-hero{
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        
-        /* --- 4. Content Styling --- */
-        .hero-content .eyebrow {
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--color-text-secondary);
-            margin-bottom: 1rem;
-        }
-
-        .hero-content h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero-content .highlight {
-            color: var(--color-accent-light);
-        }
-        
-        .hero-content p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--color-text-secondary);
-            max-width: 450px;
-            margin-bottom: 2.5rem;
-        }
-
-        /* --- 5. Buttons & CTAs --- */
-        .cta-group {
+  /* --- 3. Hero Section --- */
+       .highlight{
+        color: var(--color-accent-teal);
+       }
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            gap: 2rem;
+        background: linear-gradient(to bottom, var(--color-accent-teal), var(--color-bg-grey));
+; color: rgb(29, 26, 26); color: rgb(27, 26, 26);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
         }
 
-        .btn-primary {
-            position: relative;
-            padding: 1rem 2rem;
-            background: transparent;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            color: var(--color-text-primary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color var(--transition-speed);
-        }
-        
-        /* Animated border effect */
-        .btn-primary::before {
+        .hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            height: 100%;
-            width: 0;
-            background-color: var(--color-text-primary);
-            z-index: -1;
-            transition: width var(--transition-speed) ease-in-out;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
         }
 
-        .btn-primary:hover::before {
-            width: 100%;
-        }
-        
-        .btn-primary:hover {
-            color: var(--color-bg);
-            border-color: var(--color-text-primary);
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
-        .link-secondary {
+        .hero-text h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: rgb(7, 6, 6);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            text-decoration: none;
-            color: var(--color-text-secondary);
-            font-weight: 600;
-            transition: color var(--transition-speed);
         }
+  .btn-primary { padding: 0.8rem 2rem; background-color: var(--color-bg-light); color: var(--color-accent-teal); text-decoration: none; font-weight: 600; border-radius: 8px; transition: all var(--transition-speed); }
+        .btn-primary:hover { background-color: #f0f0f0; transform: translateY(-2px); }
+        .link-secondary { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; text-decoration: none; color: white; }
+       .btn-secondary .icon { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; background-color: white; color: var(--color-accent); border-radius: 50%; transition: transform var(--transition-speed); }
+        .btn-secondary:hover .icon { transform: rotate(45deg); }
+
         
-        .link-secondary:hover {
-            color: var(--color-text-primary);
-        }
- .phone-mockups {
-            position: relative;
-            height: 450px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .phone-mockups img {
-            position: absolute;
-            height: 100%;
-            width: auto;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+
+        .hero-image {
+            animation: float 6s ease-in-out infinite;
         }
 
-        /* --- 4. Advantages Section --- */
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+  span{
+            color: #18C0C1;
+        }   /* --- 4. Advantages Section --- */
         .advantages-section {
             background-color: var(--color-bg-grey);
         }

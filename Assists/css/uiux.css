@@ -44,7 +44,8 @@
 
         
         /* --- 3. Hero Section --- */
-        .hero-section { background-color: var(--color-bg-grey);  }
+        .hero-section {   background: linear-gradient(to bottom, var(--color-accent-teal), var(--color-bg-grey));
+; color: rgb(29, 26, 26); }
         .hero-grid { display: grid; grid-template-columns: 1fr;  align-items: center; }
         @media (min-width: 992px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
         .eyebrow { font-size: 0.9rem; font-weight: 700; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
